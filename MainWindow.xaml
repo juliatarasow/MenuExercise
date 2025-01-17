@@ -1,0 +1,28 @@
+﻿<Window x:Class="MenuExercise.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MenuExercise"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Datei">
+                    <MenuItem Header="Neu" Click="OnNew"/>
+                    <MenuItem Header="Ö_ffnen" Click="OnOpen"/>
+                    <MenuItem Header="_Speichern" Click="OnSave"/>
+                    <Separator/>
+                    <MenuItem Header="Schließen" Click="OnClose"/>
+                </MenuItem>
+                <MenuItem Header="_Bearbeiten" SubmenuOpened="OnEditMenuOpened">
+                     <MenuItem Header="Auss_schneiden" x:Name="menuCut" Click="OnCut"/>
+                     <MenuItem Header="_Kopieren" x:Name="menuCopy" Click="OnCopy"/>
+                     <MenuItem Header="_Einfügen" x:Name="menuPaste" Click="OnPaste"/>
+                 </MenuItem>
+            </Menu>
+            <ToolBarTray></ToolBarTray>
+        </DockPanel>
+    </Grid>
+</Window>
