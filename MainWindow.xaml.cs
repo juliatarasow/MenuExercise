@@ -23,12 +23,13 @@ namespace MenuExercise
 
         private void OnNew(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void OnOpen(object sender, RoutedEventArgs e)
         {
-
+            OpenDialog openDialog = new OpenDialog();
+            openDialog.ShowDialog();
         }
 
         private void OnSave(object sender, RoutedEventArgs e)
