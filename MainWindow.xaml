@@ -21,6 +21,24 @@
                 <MenuItem Header="_Einfügen" x:Name="menuPaste" Click="OnPaste"/>
             </MenuItem>
         </Menu>
-        <ToolBarTray></ToolBarTray>
+
+
+        <ToolBarTray Orientation="Vertical" 
+                     IsLocked="False">
+            <ToolBar>
+                <Button Content="Neu" 
+                    ToolBar.OverflowMode="Always"
+                    ToolTip="Neue Datei erstellen"/>
+                <Button Content="Bearbeiten"/>
+                <Separator/>
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Select.png"/>
+                        <TextBlock>Beaerbeiten</TextBlock>
+                    </StackPanel>
+                </Button>
+                
+            </ToolBar>
+        </ToolBarTray>
     </DockPanel>
 </Window>
