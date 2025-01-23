@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MenuExercise"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+  
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Datei">
@@ -22,8 +23,7 @@
             </MenuItem>
         </Menu>
 
-
-        <ToolBarTray Orientation="Vertical" 
+        <!--<ToolBarTray Orientation="Vertical" 
                      IsLocked="False">
             <ToolBar>
                 <Button Content="Neu" 
@@ -37,8 +37,60 @@
                         <TextBlock>Beaerbeiten</TextBlock>
                     </StackPanel>
                 </Button>
-                
             </ToolBar>
-        </ToolBarTray>
+        </ToolBarTray>-->
+
+        
+        
+        <ToolBarTray Orientation="Horizontal" 
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     DockPanel.Dock="Top">
+            <ToolBar x:Name="mainToolBar">
+                <ToggleButton x:Name="selectButton"
+                              Click="OnToolSelect"
+                              ToolTip="Select"
+                              ToolBar.OverflowMode="Always">
+                    <Image Source="Assets/Select.png" Width="24" Height="24"/>
+                </ToggleButton>
+                <ToggleButton x:Name ="brushButton"
+                              Click="OnToolSelect"
+                              ToolTip="Brush">
+                    <Image Source="Assets/Brush.png" Width="24" Height="24"/>
+                </ToggleButton>
+                <ToggleButton x:Name="rubberPointButton"
+                              Click="OnToolSelect"
+                              ToolTip="Rubber Point"
+                              ToolBar.OverflowMode="Always">
+                    <Image Source="Assets/RubberPoint.png" Width="24" Height="24"/>
+                </ToggleButton>
+                <ToggleButton x:Name="rubberStrokeButton"
+                              Click="OnToolSelect"
+                              ToolTip="Rubber Stroke"
+                              ToolBar.OverflowMode="Always">
+                        <Image Source="Assets/RubberStroke.png" Width="24" Height="24"/>
+                    </ToggleButton>
+                </ToolBar>
+            </ToolBarTray>
+     
+            <StatusBar DockPanel.Dock="Bottom" 
+                       VerticalAlignment="Bottom"
+                       Height="20">
+                <StatusBarItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Select.png"/>
+                        <TextBlock x:Name="ArrowPosition"/>
+                    </StackPanel>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image x:Name="Selection" Source="/Assets/Seletion.png"/>-->
+                        <TextBlock x:Name="SelectionSize"/>
+                    </StackPanel>
+                </StatusBarItem>
+            </StatusBar>
+       
+
     </DockPanel>
+ 
 </Window>

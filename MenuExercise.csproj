@@ -9,10 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Brush.png" />
+    <None Remove="Assets\Close.ico" />
+    <None Remove="Assets\Colors.png" />
+    <None Remove="Assets\MainIcon.ico" />
+    <None Remove="Assets\RubberPoint.png" />
+    <None Remove="Assets\RubberStroke.png" />
+    <None Remove="Assets\Select.png" />
     <None Remove="Select.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Brush.png" />
+    <Resource Include="Assets\Close.ico" />
+    <Resource Include="Assets\Colors.png" />
+    <Resource Include="Assets\MainIcon.ico" />
+    <Resource Include="Assets\RubberPoint.png" />
+    <Resource Include="Assets\RubberStroke.png" />
+    <Resource Include="Assets\Select.png" />
     <Resource Include="Select.png" />
   </ItemGroup>
 

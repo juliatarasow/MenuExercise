@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -60,6 +61,24 @@ namespace MenuExercise
         private void OnEditMenuOpened(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void OnToolSelect(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in mainToolBar.Items)
+            {
+                if (item is ToggleButton button)
+                {
+                    ToolBar.SetOverflowMode(button, OverflowMode.Always);
+                    button.IsChecked = false; // deaktiviere alle anderen Buttons
+                }
+
+                if (sender is ToggleButton selectedButton)
+                {
+                    ToolBar.SetOverflowMode(selectedButton, OverflowMode.Never);
+                    selectedButton.IsChecked = true; // geklickten Button aktivieren
+                }
+            }
         }
     }
 }
